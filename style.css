@@ -1,0 +1,30 @@
+html {
+
+}
+
+body {
+    padding-top: 53px;
+    margin: 0 auto;
+}
+
+.my-3 {
+    height: 2px;
+    background-color:#FF0066;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.navbar-header {
+    text-align: center;
+}
+
+.jumbotron{
+    color: red;
+    background-color: blue;
+    text-align: center;
+}
+
+#quoteText {
+    padding-left: 25px;
+}
