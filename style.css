@@ -7,6 +7,10 @@ body {
     margin: 0 auto;
 }
 
+footer {
+    text-align: center;
+}
+
 .my-3 {
     height: 2px;
     background-color:#FF0066;
@@ -20,8 +24,6 @@ body {
 }
 
 .jumbotron{
-    color: red;
-    background-color: blue;
     text-align: center;
 }
 
