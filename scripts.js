@@ -112,7 +112,20 @@ var quotesObject = {
 var counter = Math.floor(Math.random()* quotesObject.quotesArray.length);
 console.log(counter);
 
-$( "#getAnotherQuote" ).click(function() {
+$( document ).ready(function() {
+    // output the quote:
+    $('#author').html("<h2><em>"+quotesObject.quotesArray[counter].author+"</em></h2>");
+    $('#quoteText').html("\""+quotesObject.quotesArray[counter].quote+"\"");
+    //increment the counter:
+    counter++;
+    //check for the end condition:
+    if(counter === quotesObject.quotesArray.length) {
+        counter = 0;
+    }
+});
+
+
+$("#getAnotherQuote" ).click(function() {
     // output the quote:
     $('#author').html("<h2><em>"+quotesObject.quotesArray[counter].author+"</em></h2>");
     $('#quoteText').html("\""+quotesObject.quotesArray[counter].quote+"\"");
