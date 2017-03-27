@@ -1,5 +1,3 @@
-
-
 var quotesObject = {
     //the array containing the quotes and the authors:
     "quotesArray":[
@@ -108,6 +106,9 @@ var quotesObject = {
         var quoteText = "\""+quotesObject.quotesArray[counter].quote+"\"";
         $('#author').html(authorText);
         $('#quoteText').html(quoteText);
+        // Prepare the tweet:
+        var tweetHTML = 'https://twitter.com/intent/tweet?text="'+quotesObject.quotesArray[counter].quote+'"'+' -- '+quotesObject.quotesArray[counter].author;
+        $('#tweetButton').attr("href", tweetHTML);
         //increment the counter:
         counter++;
         //check for the end condition:
