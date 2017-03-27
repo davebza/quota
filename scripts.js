@@ -104,34 +104,26 @@ var quotesObject = {
         {"author":"Franklin D. Roosevelt", "quote":"When you reach the end of your rope, tie a knot in it and hang on."}
     ],
     getAQuote : function(){
-        console.log("Hi");
+        var authorText = "<h2><em>"+quotesObject.quotesArray[counter].author+"</em></h2>";
+        var quoteText = "\""+quotesObject.quotesArray[counter].quote+"\"";
+        $('#author').html(authorText);
+        $('#quoteText').html(quoteText);
+        //increment the counter:
+        counter++;
+        //check for the end condition:
+        if(counter === quotesObject.quotesArray.length) {
+            counter = 0;
+        }
     }
 }
 
 // a counter to increment through the array of quotes, and an upper limit:
 var counter = Math.floor(Math.random()* quotesObject.quotesArray.length);
-console.log(counter);
 
-$( document ).ready(function() {
-    // output the quote:
-    $('#author').html("<h2><em>"+quotesObject.quotesArray[counter].author+"</em></h2>");
-    $('#quoteText').html("\""+quotesObject.quotesArray[counter].quote+"\"");
-    //increment the counter:
-    counter++;
-    //check for the end condition:
-    if(counter === quotesObject.quotesArray.length) {
-        counter = 0;
-    }
+$(document).ready(function() {
+    quotesObject.getAQuote();
 });
 
 $("#getAnotherQuote" ).click(function() {
-    // output the quote:
-    $('#author').html("<h2><em>"+quotesObject.quotesArray[counter].author+"</em></h2>");
-    $('#quoteText').html("\""+quotesObject.quotesArray[counter].quote+"\"");
-    //increment the counter:
-    counter++;
-    //check for the end condition:
-    if(counter === quotesObject.quotesArray.length) {
-        counter = 0;
-    }
+    quotesObject.getAQuote();
 });
