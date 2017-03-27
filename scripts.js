@@ -124,7 +124,6 @@ $( document ).ready(function() {
     }
 });
 
-
 $("#getAnotherQuote" ).click(function() {
     // output the quote:
     $('#author').html("<h2><em>"+quotesObject.quotesArray[counter].author+"</em></h2>");

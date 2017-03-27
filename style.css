@@ -1,4 +1,5 @@
 html {
+    background-color: #008F95;
 
 }
 
@@ -9,6 +10,16 @@ body {
 
 footer {
     text-align: center;
+    height: 100%;
+    background-color: #008F95;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover{
+    color: #FF0066;
 }
 
 .my-3 {
