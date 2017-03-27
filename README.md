@@ -3,7 +3,7 @@
 
 This app currently serves a random quote from the top 100 rated quotes of all time on brainyquote.com, and users can tweet a quote by clicking a button that will auto-populate the tweet field with the quote and the author.
 
-![](images/readmePreview.jpg)
+![](images/readmePreview.png)
 
 ## Installation
 
