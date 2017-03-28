@@ -102,9 +102,13 @@ var quotesObject = {
         {"author":"Franklin D. Roosevelt", "quote":"When you reach the end of your rope, tie a knot in it and hang on."}
     ],
     getAQuote : function(){
+        //make the text output for the author:
         var authorText = "<h2><em>"+quotesObject.quotesArray[counter].author+"</em></h2>";
+        //make the text output for the wikilink:
+        var wikilink = quotesObject.quotesArray[counter].author.split(" ").join("_");
+        wikilink = '<a href="https://en.wikipedia.org/wiki/'+wikilink+'" target="blank">'+authorText+'</a>';
         var quoteText = "\""+quotesObject.quotesArray[counter].quote+"\"";
-        $('#author').html(authorText);
+        $('#author').html(wikilink);
         $('#quoteText').html(quoteText);
         // Prepare the tweet:
         var tweetHTML = 'https://twitter.com/intent/tweet?text="'+quotesObject.quotesArray[counter].quote+'"'+' -- '+quotesObject.quotesArray[counter].author;
